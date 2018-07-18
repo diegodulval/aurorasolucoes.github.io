@@ -127,26 +127,25 @@ svg {
   height: 95%; }
   svg .icon {
     fill: url(#gradient-icon); }
+  svg .icon-box {
+    transform-origin: center;
+    animation: scaleUp 3s ease; }
   svg .letter-aurora {
     fill: #fff;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 3s; }
+    animation: fade 3s ease;
+    opacity: 1;
+    transform-origin: center; }
   svg .letter-solucoes {
-    fill: url(#gradient-letter); }
+    animation: fade 3s ease;
+    fill: url(#gradient-letter);
+    opacity: 1;
+    transform-origin: center; }
   svg polygon {
     stroke: #f2cf76;
     fill: #f2cf76;
     stroke-dasharray: 1800;
     opacity: 1;
     animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1); }
-  svg .letter-solucoes {
-    stroke: #f2cf76;
-    fill: #f2cf76;
-    stroke-dasharray: 1600;
-    opacity: 1;
-    animation: animate 4s cubic-bezier(0, 0.23, 1, 0.1); }
 
 @keyframes animate {
   0% {
@@ -163,6 +162,20 @@ svg {
     opacity: 1;
     fill: #f2cf76;
     stroke-dashoffset: 0; } }
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(2); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes fade {
+  0% {
+    transform: scale(0.5);
+    opacity: 0; }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
 
 .header {
   height: 100vh; }

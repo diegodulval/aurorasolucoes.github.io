@@ -39,16 +39,27 @@ svg {
     fill: url(#gradient-icon);
   }
 
+  & .icon-box {
+    transform-origin: center;
+    animation: scaleUp 3s ease;
+  }
+
   & .letter-aurora {
     fill: $color-white;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;
+    animation: fade 3s ease;
+    opacity: 1;
+    transform-origin: center;
+    //animation-name: fadeInOpacity;
+    //animation-iteration-count: 1;
+    //animation-timing-function: ease-in;
+    //animation-duration: 3s;
   }
 
   & .letter-solucoes {
+    animation: fade 3s ease;
     fill: url(#gradient-letter);
+    opacity: 1;
+    transform-origin: center;
   }
 
   & polygon {
@@ -57,14 +68,6 @@ svg {
     stroke-dasharray: 1800;
     opacity: 1;
     animation: animate 3s cubic-bezier(0, 0.23, 1, 0.1);
-  }
-
-  & .letter-solucoes {
-    stroke: $color-primary;
-    fill: $color-primary;
-    stroke-dasharray: 1600;
-    opacity: 1;
-    animation: animate 4s cubic-bezier(0, 0.23, 1, 0.1);
   }
 }
 
@@ -89,5 +92,26 @@ svg {
     opacity: 1;
     fill: rgba($color-primary, 1);
     stroke-dashoffset: 0;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
