@@ -20,13 +20,13 @@
     stroke-dashoffset: 1800;
   }
 
-  30% {
+  12% {
     opacity: 1;
     fill: none;
     stroke-dashoffset: 1800;
   }
 
-  80% {
+  50% {
     fill: rgba($color-primary, 0);
   }
 
@@ -56,5 +56,14 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
   }
 }
