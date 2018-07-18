@@ -41,10 +41,10 @@ svg {
 
   & .letter-aurora {
     fill: $color-white;
-    animation-name: animate-letter;
+    animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
-    animation-duration: 4s;
+    animation-duration: 3s;
   }
 
   & .letter-solucoes {
@@ -89,41 +89,5 @@ svg {
     opacity: 1;
     fill: rgba($color-primary, 1);
     stroke-dashoffset: 0;
-  }
-}
-
-@keyframes show {
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes animate-letter {
-  0% {
-    opacity: 0;
-    fill: none;
-    stroke-dashoffset: 1800;
-  }
-
-  30% {
-    opacity: 1;
-    fill: none;
-    stroke-dashoffset: 1800;
-  }
-
-  90% {
-    fill: rgba($color-white, 0);
-  }
-
-  100% {
-    opacity: 1;
-    fill: rgba($color-white, 1);
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes show {
-  to {
-    opacity: 1;
   }
 }
