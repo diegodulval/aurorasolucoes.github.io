@@ -13,4 +13,10 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: $color-black;
+
+  -webkit-animation: fadeInOpacity 1.5s ease-in-out;
+  -moz-animation: fadeInOpacity 1.5s ease-in-out;
+  -o-animation: fadeInOpacity 1.5s ease-in-out;
+  animation: fadeInOpacity 1.5s ease-in-out;
 }

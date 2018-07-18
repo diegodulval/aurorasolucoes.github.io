@@ -1,18 +1,9 @@
 .header {
   height: 100vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.9),
-      rgba($color-primary-dark, 0.9)
-    ),
-    url(../img/bg.jpg);
-  background-size: cover;
-  background-position: top;
-  position: relative;
 
   &__logo-box {
     @include absCenter;
-
+    z-index: 999;
     animation-name: fadeInOpacity;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
@@ -20,12 +11,12 @@
   }
 
   &__logo {
+    height: 16rem;
     &:hover {
       animation-name: pulse;
       animation-duration: 1s;
       animation-timing-function: ease-out;
+      animation-iteration-count: infinite;
     }
-
-    height: 11rem;
   }
 }

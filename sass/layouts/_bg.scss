@@ -1,0 +1,19 @@
+.bg {
+  background-color: $color-black;
+  height: 100vh;
+
+  &__desk {
+    background-color: inherit;
+    mix-blend-mode: multiply;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(../img/desk.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+}
